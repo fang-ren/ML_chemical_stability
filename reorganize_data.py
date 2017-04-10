@@ -8,7 +8,7 @@ Created on Wed 12/14/16
 
 import numpy as np
 import pandas as pd
-from import_training_data_new import import_training_data
+from import_training_data import import_training_data
 from check_collinearity import check_collinearity
 
 save_path = 'report//'

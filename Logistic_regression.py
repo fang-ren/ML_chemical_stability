@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 
-save_path = 'report//single_variable_visualization//'
+save_path = 'report//'
 
 X, Y = import_training_data()
 #X, Y = data_cleaning(X, Y, 5)
@@ -50,3 +50,5 @@ plt.xlim(1, Y_test.shape[1] + 1)
 plt.ylim(1, Y_test.shape[0] + 1)
 plt.xlabel('stability vector')
 # plt.ylabel('samples')
+plt.savefig(save_path + 'logistic_regression_results.png')
+plt.close('all')
