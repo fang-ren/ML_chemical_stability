@@ -1,5 +1,5 @@
 
-from import_training_data_new import import_training_data
+from import_training_data import import_training_data
 from check_collinearity import check_collinearity
 from reorganize_data import reorganize_data
 from data_cleaning import data_cleaning

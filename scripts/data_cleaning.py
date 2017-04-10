@@ -1,5 +1,5 @@
 
-from import_training_data_new import import_training_data
+from import_training_data import import_training_data
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats

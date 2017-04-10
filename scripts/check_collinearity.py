@@ -1,6 +1,6 @@
 
 
-from import_training_data_new import import_training_data
+from import_training_data import import_training_data
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
