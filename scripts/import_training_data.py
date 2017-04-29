@@ -9,7 +9,7 @@ Created on Wed 12/14/16
 import pandas as pd
 import numpy as np
 
-def import_training_data(training_file = 'data\\data\\training_data.csv'):
+def import_training_data(training_file = '..\\data\\data\\training_data.csv'):
     # import data into dataframe
     data = pd.read_csv(training_file)
 
@@ -42,4 +42,5 @@ def import_training_data(training_file = 'data\\data\\training_data.csv'):
                              'composition_A=0.9': stabilityVec[:,9]})
     return X, Y
 
-#X, Y = import_training_data()
+# X, Y = import_training_data()
+# print X.shape, Y.shape
