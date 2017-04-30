@@ -5,18 +5,19 @@ from reorganize_data import reorganize_data
 from data_cleaning import data_cleaning
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
 import notebook
 import seaborn as sns
 import os.path
 
-save_path = 'report//single_variable_visualization//'
 
 X, Y = import_training_data()
 #X, Y = data_cleaning(X, Y, 5)
 X = check_collinearity(X)
 X, y = reorganize_data(X, Y)
 names = list(X)
+
+print X.shape, y.shape
+print X[names[0]].shape
 
 cmap = sns.cubehelix_palette(start=0.0, light=1, as_cmap=True)
 
@@ -33,19 +34,21 @@ cmap = sns.cubehelix_palette(start=0.0, light=1, as_cmap=True)
 
 
 # single variable vs target (attrition)
-save_path = 'report\\single_variable_visualization'
+save_path = '..\\report\\single_variable_visualization'
 if not os.path.exists(save_path):
     os.mkdir(save_path)
 
+
 for i in range(len(names)):
-    sns.jointplot(X[names[i]], y, cmap=cmap, kind = 'kde')
+    print "start making plots...", i
+    sns.jointplot(X[names[i]], y.ix[:,0], cmap=cmap, kind = 'kde')
     plt.savefig(os.path.join(save_path, names[i]))
     plt.close('all')
 
-
-# skewness of the target (attrition)
-save_path = 'report\\'
-if not os.path.exists(save_path):
-    os.mkdir(save_path)
-sns.distplot(y)
-plt.savefig(os.path.join(save_path, 'distribution of target variable'))
+#
+# # skewness of the target (attrition)
+# save_path = 'report\\'
+# if not os.path.exists(save_path):
+#     os.mkdir(save_path)
+# sns.distplot(y)
+# plt.savefig(os.path.join(save_path, 'distribution of target variable'))

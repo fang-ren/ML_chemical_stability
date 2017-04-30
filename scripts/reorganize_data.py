@@ -40,4 +40,6 @@ def reorganize_data(X, Y):
 # ## to run
 # X, Y = import_training_data()
 # X = check_collinearity(X)
-# X, Y = reorganize_data(X, Y)
+# print X.shape, Y.shape
+# X, y = reorganize_data(X, Y)
+# print X.shape, y.shape

@@ -5,12 +5,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-save_path = 'report//'
+save_path = '..//report//'
 
 def check_collinearity(X):
     # get column names from the variables
     names = list(X)
-
     # check collinearity of variables
     corr = X.corr()
 
@@ -37,11 +36,10 @@ def check_collinearity(X):
     # plt.yticks(range(len(corr.columns)), corr.columns, fontsize = 5)
     # plt.savefig(save_path + 'correlation_checked', dpi = 600)
 
-
     return X
 
 # X, Y = import_training_data()
+# print X.shape
 # X = check_collinearity(X)
-
-#print data, data.shape
-
+# print X.shape
+#

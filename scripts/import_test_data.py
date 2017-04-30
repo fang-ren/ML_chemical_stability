@@ -9,7 +9,7 @@ Created on Wed 12/14/16
 import pandas as pd
 import numpy as np
 
-def import_test_data(test_file = 'data\\data\\test_data.csv'):
+def import_test_data(test_file = '..\\data\\data\\test_data.csv'):
     # import data into dataframe
     data = pd.read_csv(test_file)
 
@@ -20,3 +20,6 @@ def import_test_data(test_file = 'data\\data\\test_data.csv'):
     del data[names[0]]
     del data[names[1]]
     return data
+
+# X_test = import_test_data()
+# print X_test.shape
