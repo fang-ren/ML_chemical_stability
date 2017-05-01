@@ -39,16 +39,18 @@ if not os.path.exists(save_path):
     os.mkdir(save_path)
 
 
-for i in range(len(names)):
-    print "start making plots...", i
-    sns.jointplot(X[names[i]], y.ix[:,0], cmap=cmap, kind = 'kde')
-    plt.savefig(os.path.join(save_path, names[i]))
-    plt.close('all')
+# for i in range(len(names)):
+#     print "start making plots...", i
+#     sns.jointplot(X[names[i]], y.ix[:,0], cmap=cmap, kind = 'kde')
+#     plt.savefig(os.path.join(save_path, names[i]))
+#     plt.close('all')
 
-#
-# # skewness of the target (attrition)
-# save_path = 'report\\'
-# if not os.path.exists(save_path):
-#     os.mkdir(save_path)
-# sns.distplot(y)
-# plt.savefig(os.path.join(save_path, 'distribution of target variable'))
+
+# skewness of the target (attrition)
+save_path = '..\\report\\'
+if not os.path.exists(save_path):
+    os.mkdir(save_path)
+sns.distplot(y.ix[:,0])
+plt.savefig(os.path.join(save_path, 'distribution of the target variable'))
+
+print
